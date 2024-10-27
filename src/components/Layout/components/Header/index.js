@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faCircleQuestion,
     faCircleXmark,
-    faCloudUpload,
     faCoins,
     faEarthAsia,
     faEllipsisVertical,
@@ -26,6 +25,8 @@ import styles from './Header.module.scss';
 import images from '~/assets/images';
 import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/popper/Menu';
+import { InboxIcon, MessageIcon, UploadIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -140,9 +141,20 @@ function Header() {
                 <div className={cx('actions')}>
                     {currentUser ? (
                         <>
-                            <Tippy delay={[0, 200]} content="Upload video" placement="bottom">
+                            <Tippy delay={[0, 50]} content="Upload video" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    <UploadIcon />
+                                </button>
+                            </Tippy>
+                            <Tippy delay={[0, 50]} content="Message" placement="bottom">
+                                <button className={cx('action-btn')}>
+                                    <MessageIcon />
+                                </button>
+                            </Tippy>
+                            <Tippy delay={[0, 50]} content="Inbox" placement="bottom">
+                                <button className={cx('action-btn')}>
+                                    <InboxIcon />
+                                    <span className={cx('badge')}>12</span>
                                 </button>
                             </Tippy>
                         </>
@@ -154,10 +166,11 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/4e74ca550699cf63d8739ecfef393383.jpeg?lk3s=a5d48078&nonce=43843&refresh_token=dab2a7072ddfcdfebd2e88c4e4ab89c9&x-expires=1730174400&x-signature=dm%2BO%2FsCDjIXqrh9Ro5FSuHfJjCk%3D&shp=a5d48078&shcp=81f88b70"
                                 className={cx('user-avatar')}
                                 alt="Nguyen Van A"
+                                fallback="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-euttp/7377272319632703520~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=87340&refresh_token=73a0834d83f7b7189afb52b21b76c396&x-expires=1730196000&x-signature=SETpK0aHJ74PBXun6EWT29L5M5g%3D&shp=a5d48078&shcp=81f88b70"
                             />
                         ) : (
                             <button className={cx('more-btn')}>

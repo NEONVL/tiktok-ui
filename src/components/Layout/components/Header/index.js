@@ -132,7 +132,7 @@ function Header() {
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
                             <Image
-                                src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/4e74ca550699cf63d8739ecfef393383.jpeg?lk3s=a5d48078&nonce=43843&refresh_token=dab2a7072ddfcdfebd2e88c4e4ab89c9&x-expires=1730174400&x-signature=dm%2BO%2FsCDjIXqrh9Ro5FSuHfJjCk%3D&shp=a5d48078&shcp=81f88b70"
+                                src="https://scontent.fsgn2-8.fna.fbcdn.net/v/t39.30808-6/278578600_2798655607097610_2980287939056482975_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeHaecz2_tiR-aLaIVzh192cm6qQmRLcUa6bqpCZEtxRrgh6OzElG0O70t7hUkkvA_-LuoVcNW-lqZ17IGuvGcdl&_nc_ohc=_CrHcEUezUIQ7kNvgFPhCOu&_nc_zt=23&_nc_ht=scontent.fsgn2-8.fna&_nc_gid=AXPo9fFPVQ9DMmB-AvNpw_1&oh=00_AYDE9WiHg4DDmBBdJ3LvEGvSuXPt-udxSkWUEuZd4Zuouw&oe=67292970"
                                 className={cx('user-avatar')}
                                 alt="Nguyen Van A"
                                 fallback="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-euttp/7377272319632703520~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=87340&refresh_token=73a0834d83f7b7189afb52b21b76c396&x-expires=1730196000&x-signature=SETpK0aHJ74PBXun6EWT29L5M5g%3D&shp=a5d48078&shcp=81f88b70"
